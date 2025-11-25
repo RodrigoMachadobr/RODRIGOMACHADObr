@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Fé e a Dor – Arte Original</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Arte original criada por um artista com deficiência visual. Cada traço carrega luta, coragem e emoção. Obra: A Fé e a Dor.">
+    <meta name="author" content="Rodrigo Machado">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: #fff;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            padding: 35px 15px;
+        }
+        h1 {
+            font-size: 32px;
+            margin-bottom: 6px;
+        }
+        .container {
+            max-width: 850px;
+            margin: auto;
+            padding: 20px;
+        }
+        img {
+            width: 100%;
+            border-radius: 6px;
+            margin-bottom: 22px;
+        }
+        .price {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 18px 0;
+        }
+        .btn {
+            display: inline-block;
+            background: #0bb60b;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        .frete-box {
+            background: #222;
+            padding: 18px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 5px;
+            border: none;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            background: #444;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+            opacity: .6;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>A Fé e a Dor</h1>
+    <p>Obra original em papel Canson – 30×40 cm</p>
+</header>
+
+<div class="container">
+    <img src="COLE_AQUI_O_LINK_DA_IMAGEM_DA_OBRA" alt="Obra A Fé e a Dor">
+
+    <p>
+        Cada traço desta obra foi construído no limite entre força e vulnerabilidade.  
+        O artista desenha aproximando o rosto do papel, interpretando sombras borradas e sentindo o relevo do lápis para entender onde está.  
+        A arte aqui não busca perfeição — ela carrega fé, dor e resistência.
+    </p>
+
+    <div class="price">R$ 100,00</div>
+
+    <a class="btn"
+    href="https://wa.me/5548998023407?text=Olá,+tenho+interesse+na+obra+A+Fé+e+A+Dor"
+    target="_blank">
+        Comprar pelo WhatsApp
+    </a>
+
+    <div class="frete-box">
+        <h3>Calcular frete</h3>
+        <input type="text" id="cep" maxlength="8" placeholder="Digite seu CEP">
+        <button onclick="calcularFrete()">Calcular</button>
+        <p id="freteResultado"></p>
+    </div>
+</div>
+
+<footer>
+    © 2025 – Rodrigo Machado – Todos os direitos reservados
+</footer>
+
+<script>
+function calcularFrete() {
+    let cep = document.getElementById("cep").value;
+    if (cep.length !== 8) {
+        document.getElementById("freteResultado").innerHTML = "CEP inválido";
+        return;
+    }
+    // Simulação simples – envio fixo
+    let valorFrete = 29.90;
+    document.getElementById("freteResultado").innerHTML =
+        "Envio para " + cep + ": R$ " + valorFrete.toFixed(2);
+}
+</script>
+
+</body>
+</html>
